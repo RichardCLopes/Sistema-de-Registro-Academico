@@ -5,7 +5,6 @@
 struct dadosAluno {
 char nome[50], ra[6];
 float nota;
-
 };
 
 struct dadosAluno recebedados();
@@ -46,11 +45,8 @@ int main()
                 printf("\nAluno buscado ...");
                 printf("\nNome:\t%s\n", listAlunos[numbusca].nome);
                 printf("RA:\t");
-            for(j=0;j<6;j++)
-            {
-                printf("%c", listAlunos[numbusca].ra[j]);
-            }
-                printf("\nNota:\t%.2f\n\n", listAlunos[numbusca].nota);
+                printf("%s\n", listAlunos[numbusca].ra); 
+                printf("Nota:\t%.2f\n\n", listAlunos[numbusca].nota);
             }
             break;
         case 4:
@@ -64,11 +60,8 @@ int main()
                 printf("\nAluno buscado ...");
                 printf("\nNome:\t%s\n", listAlunos[numbusca].nome);
                 printf("RA:\t");
-            for(j=0;j<6;j++)
-            {
-                printf("%c", listAlunos[numbusca].ra[j]);
-            }
-                printf("\nNota:\t%.2f\n\n", listAlunos[numbusca].nota);
+                printf("%s\n", listAlunos[numbusca].ra); 
+                printf("Nota:\t%.2f\n\n", listAlunos[numbusca].nota);
             }
             break;
         case 5:
@@ -133,8 +126,9 @@ int removeraluno(struct dadosAluno lista[], int max)
         printf("\nNumero do aluno que deseja remover o cadastro:\t");
         scanf("%i", &num);
     }while(num<1 || num>max);
-        printf("\n");
-        lista[num - 1] = lista[max - 1];
+    
+    printf("\n");
+    lista[num - 1] = lista[max - 1];
     if (max == 0)
     {
         return max;
@@ -147,28 +141,17 @@ int removeraluno(struct dadosAluno lista[], int max)
 
 int buscara(struct dadosAluno lista[], int max)
 {
-    int i, j, c=0;
-    char ra[50];
+    int i, j;
+    char ra[7];
     
     printf("\nDigite o RA do aluno que deseja encontrar:\t");
     fflush(stdin);
     scanf("%s", ra);
     for (i = 0; i < max; i++)
     {
-        for(j=0;j<6;j++)
-        {
-            if (ra[j] == lista[i].ra[j])
-            {
-                c++;
-            }
-        }
-        if(c==6)
+        if (strcmp(ra, lista[i].ra) == 0)
         {
             return i;
-        }
-        else
-        {
-            c=0;
         }
     }
     return -1;
@@ -200,11 +183,8 @@ int mostrardados(struct dadosAluno lista[], int max)
     for (i = 0; i < max; i++)
     {
         printf("%s\t\t", lista[i].nome);
-        for(j=0;j<6;j++)
-        {
-            printf("%c", lista[i].ra[j]);
-        }
-        printf("\t\t%.2f\n", lista[i].nota);
+        printf("%s\t\t", lista[i].ra); 
+        printf("%.2f\n", lista[i].nota);
     }
     return 1;
 }
