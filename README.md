@@ -2,6 +2,8 @@
 
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 
+<p>O código descrito a seguir possui duas implementações diferentes, uma com lista ligada e alocação dinâmica, e outra com tamanho máximo definido no vetor da struct.</p>
+
 <p>O programa realiza o cadastro de notas de alunos. O cadastro dos alunos possui os seguintes campos: </p>
 
 <ul>
