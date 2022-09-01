@@ -2,7 +2,9 @@
 
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 
-<p>O código descrito a seguir possui duas implementações diferentes, uma com lista ligada e alocação dinâmica, e outra com tamanho máximo definido no vetor da struct.</p>
+<p>O programa descrito a seguir possui dois códigos que foram implementados de forma diferente, uma com lista ligada e alocação dinâmica de memória, e outra com tamanho máximo definido no vetor da struct.</p>
+
+<p>❗❗A implementação com lista ligada ainda necessita de Updates, ou seja, não está 100% pronto ainda, já o outro código está 100% Okay.❗❗</p>
 
 <p>O programa realiza o cadastro de notas de alunos. O cadastro dos alunos possui os seguintes campos: </p>
 
@@ -23,4 +25,4 @@
   <li>Sair</li>
 </ol>
 
-### O intuito deste programa foi aprender a utilizar vetor de registros (structs) para armazenar dados. 
+### O intuito deste programa foi aprender a utilizar vetor de registros (structs) para armazenar dados.
